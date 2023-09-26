@@ -1,6 +1,6 @@
 # Todo App Server
 
-Welcome to the Todo App Server repository! This repository hosts a NestJS server that provides APIs to manage and tasks. You can easily deploy this server using Docker and Nodejs for a hassle-free setup.
+Welcome to the Todo App Server repository! This repository hosts a NestJS server that provides APIs to manage tasks. You can easily deploy this server using Docker and Nodejs for a hassle-free setup.
 
 ## Table of Contents
 
@@ -92,7 +92,7 @@ This endpoint allows you to create a new task by providing the task details in t
 
 - `title` (required): The title of the task (string).
 - `description` (optional): A description of the task (string).
-- `status` (optional): The status of the task (string) - must be one of the valid task statuses.
+- `status` (optional): The status of the task (string) - must be one of the valid task statuses(OPEN, IN_PROGRESS, COMPLETED).
 
 #### Request Example
 
@@ -126,7 +126,7 @@ This endpoint allows you to update an existing task by providing the updated tas
 - `id` (required): The ID of the task to update (number).
 - `title` (required): The updated title of the task (string).
 - `description` (optional): The updated description of the task (string).
-- `currTaskStatus` (required): The updated status of the task (string) - must be one of the valid task statuses.
+- `currTaskStatus` (required): The updated status of the task (string) - must be one of the valid task statuses(OPEN, IN_PROGRESS, COMPLETED).
 
 #### Request Example
 
