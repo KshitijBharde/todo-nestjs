@@ -33,7 +33,7 @@ Before running the server, create a `.env` file in the root directory based on t
 
 ```bash
 git clone https://github.com/KshitijBharde/todo-nestjs.git
-cd image-upload-server
+cd todo-nestjs
 ```
 
 2. Install dependencies:
