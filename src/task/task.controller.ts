@@ -101,7 +101,7 @@ export class TaskController {
   @Delete('/deleteTaskById/:id')
   deleteTaskById(@Param() params: any): Promise<void> {
     const id = Number(params.id);
-    if (id) {
+    if (!id) {
       // NaN
       throw new HttpException(
         {
