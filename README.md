@@ -1,6 +1,6 @@
 # Todo App Server
 
-Welcome to the Todo App Server repository! This repository hosts a NestJS server that provides APIs to manage and tasks. You can easily deploy this server using Docker and Nodejs for a hassle-free setup.
+Welcome to the Todo App Server repository! This repository hosts a NestJS server that provides APIs to manage tasks. You can easily deploy this server using Docker and Nodejs for a hassle-free setup.
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ Before running the server, create a `.env` file in the root directory based on t
 
 ```bash
 git clone https://github.com/KshitijBharde/todo-nestjs.git
-cd image-upload-server
+cd todo-nestjs
 ```
 
 2. Install dependencies:
@@ -56,7 +56,7 @@ The server will be accessible at `http://localhost:[SERVER_PORT]`.
 
 #### Endpoint
 
-- `GET /getTasks`
+- `GET /api/getTasks`
 
 #### Description
 
@@ -70,7 +70,7 @@ This endpoint retrieves a list of tasks based on the specified query parameters.
 #### Request Example
 
 ```http
-GET /getTasks?limit=10&offset=0
+GET /api/getTasks?limit=10&offset=0
 ```
 
 #### Response
@@ -82,7 +82,7 @@ GET /getTasks?limit=10&offset=0
 
 #### Endpoint
 
-- `POST /createNewTask`
+- `POST /api/createNewTask`
 
 #### Description
 
@@ -92,12 +92,12 @@ This endpoint allows you to create a new task by providing the task details in t
 
 - `title` (required): The title of the task (string).
 - `description` (optional): A description of the task (string).
-- `status` (optional): The status of the task (string) - must be one of the valid task statuses.
+- `status` (optional): The status of the task (string) - must be one of the valid task statuses(OPEN, IN_PROGRESS, COMPLETED).
 
 #### Request Example
 
 ```json
-POST /createNewTask
+POST /api/createNewTask
 
 {
   "title": "New Task",
@@ -115,7 +115,7 @@ POST /createNewTask
 
 #### Endpoint
 
-- `PUT /updateTask`
+- `PUT /api/updateTask`
 
 #### Description
 
@@ -126,12 +126,12 @@ This endpoint allows you to update an existing task by providing the updated tas
 - `id` (required): The ID of the task to update (number).
 - `title` (required): The updated title of the task (string).
 - `description` (optional): The updated description of the task (string).
-- `currTaskStatus` (required): The updated status of the task (string) - must be one of the valid task statuses.
+- `currTaskStatus` (required): The updated status of the task (string) - must be one of the valid task statuses(OPEN, IN_PROGRESS, COMPLETED).
 
 #### Request Example
 
 ```json
-PUT /updateTask
+PUT /api/updateTask
 
 {
   "id": 1,
@@ -150,7 +150,7 @@ PUT /updateTask
 
 #### Endpoint
 
-- `GET /getMetrics`
+- `GET /api/getMetrics`
 
 #### Description
 
@@ -159,7 +159,7 @@ This endpoint retrieves monthly metrics for tasks, including the count of open, 
 #### Request Example
 
 ```http
-GET /getMetrics
+GET /api/getMetrics
 ```
 
 #### Response
@@ -171,7 +171,7 @@ GET /getMetrics
 
 #### Endpoint
 
-- `DELETE /deleteTaskById/:id`
+- `DELETE /api/deleteTaskById/:id`
 
 #### Description
 
@@ -184,7 +184,7 @@ This endpoint allows you to delete a task by its ID.
 #### Request Example
 
 ```http
-DELETE /deleteTaskById/1
+DELETE /api/deleteTaskById/1
 ```
 
 #### Response
