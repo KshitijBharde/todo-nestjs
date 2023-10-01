@@ -56,7 +56,7 @@ The server will be accessible at `http://localhost:[SERVER_PORT]`.
 
 #### Endpoint
 
-- `GET /api/getTasks`
+- `GET /api/task/getTasks`
 
 #### Description
 
@@ -70,7 +70,7 @@ This endpoint retrieves a list of tasks based on the specified query parameters.
 #### Request Example
 
 ```http
-GET /api/getTasks?limit=10&offset=0
+GET /api/task/getTasks?limit=10&offset=0
 ```
 
 #### Response
@@ -82,7 +82,7 @@ GET /api/getTasks?limit=10&offset=0
 
 #### Endpoint
 
-- `POST /api/createNewTask`
+- `POST /api/task/createNewTask`
 
 #### Description
 
@@ -97,7 +97,7 @@ This endpoint allows you to create a new task by providing the task details in t
 #### Request Example
 
 ```json
-POST /api/createNewTask
+POST /api/task/createNewTask
 
 {
   "title": "New Task",
@@ -115,7 +115,7 @@ POST /api/createNewTask
 
 #### Endpoint
 
-- `PUT /api/updateTask`
+- `PUT /api/task/updateTask`
 
 #### Description
 
@@ -131,7 +131,7 @@ This endpoint allows you to update an existing task by providing the updated tas
 #### Request Example
 
 ```json
-PUT /api/updateTask
+PUT /api/task/updateTask
 
 {
   "id": 1,
@@ -150,7 +150,7 @@ PUT /api/updateTask
 
 #### Endpoint
 
-- `GET /api/getMetrics`
+- `GET /api/task/getMetrics`
 
 #### Description
 
@@ -159,7 +159,7 @@ This endpoint retrieves monthly metrics for tasks, including the count of open, 
 #### Request Example
 
 ```http
-GET /api/getMetrics
+GET /api/task/getMetrics
 ```
 
 #### Response
@@ -171,7 +171,7 @@ GET /api/getMetrics
 
 #### Endpoint
 
-- `DELETE /api/deleteTaskById/:id`
+- `DELETE /api/task/deleteTaskById/:id`
 
 #### Description
 
@@ -184,7 +184,7 @@ This endpoint allows you to delete a task by its ID.
 #### Request Example
 
 ```http
-DELETE /api/deleteTaskById/1
+DELETE /api/task/deleteTaskById/1
 ```
 
 #### Response
